@@ -1,0 +1,25 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/widgets/Header.astro';
+
+
+import type { MetaData } from '~/types';
+
+export interface Props {
+  metadata?: MetaData;
+}
+
+const { metadata } = Astro.props;
+---
+
+<Layout metadata={metadata}>
+  <slot name="header">
+        <Header
+      isSticky
+      showToggleTheme
+    />
+  </slot>
+  <main>
+    <slot />
+  </main>
+</Layout>

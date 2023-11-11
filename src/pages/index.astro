@@ -1,0 +1,32 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+export const prerender = false;
+import Header from '~/components/widgets/Header.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'IoT Security',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="Get Started with a Free Trial!"
+    title="Supercharge Your IoT Firmware Security"
+    subtitle="Safeguard your IoT devices with ease. Just upload your firmware, and our cutting-edge scanner will take care of vulnerabilities, giving you peace of mind."
+    actions={[
+      { text: 'Learn more', href: '#' },
+      { variant: 'primary', text: 'Upload firmware', href: getPermalink('/login'), icon: 'tabler:square-rounded-arrow-right' },
+    ]}
+    image={{
+      src: '~/assets/images/safety.png',
+      alt: 'Store with a Coming Soon sign. Pre-launch Landing Page',
+    }}
+  />
+</Layout>

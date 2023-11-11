@@ -1,0 +1,49 @@
+---
+import { getPermalink, getBlogPermalink, getAsset } from '~/utils/permalinks';
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/widgets/Header.astro';
+import Footer from '~/components/widgets/Footer.astro';
+
+import { headerData, footerData } from '~/navigation';
+
+import type { MetaData } from '~/types';
+
+export interface Props {
+  metadata?: MetaData;
+}
+
+const { metadata } = Astro.props;
+---
+
+<Layout metadata={metadata}>
+  <slot name="header">
+        <Header
+      position="middle"
+      links={[
+        { text: 'Home', href: '/' },
+        { text: 'About', href: getPermalink('/about') },
+        { text: 'Blog', href: getBlogPermalink() },
+      ]}
+      actions={[
+        {
+          variant: 'secondary',
+          text: 'Login',
+          href: getPermalink('/login'),
+        },
+        {
+          variant: 'primary',
+          text: 'Sign Up',
+          href: getPermalink('/signup'),
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </slot>
+  <main>
+    <slot />
+  </main>
+  <slot name="footer">
+    <Footer {...footerData} />
+  </slot>
+</Layout>

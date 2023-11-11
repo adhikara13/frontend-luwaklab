@@ -1,0 +1,163 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About LuwakLab"
+    image={{
+      src: '~/assets/images/about-us.png',
+      alt: 'About us image',
+    }}
+  >
+    <Fragment slot="title">
+      Exploring IoT Security with <br />
+      <span class="text-accent dark:text-white highlight"> LuwakLab</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      LuwakLab is your trusted partner in IoT security. We offer a unique blend of cutting-edge tools, all accessible through our user-friendly web app.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Key Stats"
+    stats={[
+      { title: 'Office', amount: '1' },
+      { title: 'Employees', amount: '3' },
+      { title: 'CVEs', amount: '11' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Our Services"
+    subtitle="Discover our comprehensive services designed to secure the IoT landscape."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Firmware Scanner',
+        description:
+          'Identify vulnerabilities in IoT firmware effortlessly.',
+        icon: 'tabler:zoom-scan',
+      },
+      {
+        title: 'Binary Comparer',
+        description:
+          'Compare firmware before and after patches to ensure security.',
+        icon: 'tabler:git-compare',
+      },
+      {
+        title: 'Firmware Emulation',
+        description:
+          'Emulate firmware to test for potential threats and vulnerabilities.',
+        icon: 'tabler:settings-automation',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Mission and Values"
+    subtitle="Our mission is clear: to provide a simple yet effective solution to secure the IoT ecosystem. We value simplicity, practicality, and continuous improvement."
+    items={[
+      {
+        title: 'Simplicity and Usefulness',
+        description:
+          'We aim to simplify IoT security and make it accessible to all.',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: 'All-in-One Solution',
+        description:
+          'Our goal is to bring all IoT security tools into a single, user-friendly platform.',
+        icon: 'tabler:arrow-merge-alt-right',
+      },
+    ]}
+  />
+
+    <!-- Steps2 Widget ****************** -->
+    <Steps2
+    title="Team and Culture"
+    subtitle="Our agile team of three passionate individuals drives our mission forward."
+    isReversed={true}
+    items={[
+      {
+        title: 'Agile Work Environment',
+        description: 'We embrace an agile approach to adapt and innovate quickly.',
+        icon: 'tabler:arrow-big-right-lines',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+  <Steps2
+    title="Achievements"
+    subtitle="We've made significant contributions to IoT security, with multiple CVEs discovered."
+    callToAction={{
+      text: 'See More',
+      href: '/',
+    }}
+    items={[
+      {
+        title: 'CVE Discoveries',
+        description: "We've identified a significant number of CVEs in various IoT devices.",
+        icon: 'tabler:shield-check',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <Features2
+    title="Location and Future Goals"
+    tagline="Our Aspirations"
+    columns={2}
+    items={[
+      {
+        title: 'Location',
+        description: 'We are an online-based company with a global team spread across various parts of the world.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Future Goals',
+        description: 'Our vision is to become the leading IoT security company, making the connected world safer.',
+        icon: 'tabler:chart-line',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <Features2
+    title="Technical Support"
+    tagline="Contact Us"
+    columns={2}
+    items={[
+      {
+        title: 'Chat with Us',
+        description: 'Connect with us through live chat for immediate assistance.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Call Us',
+        description: 'You can call us anytime for support and inquiries.',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+</Layout>
