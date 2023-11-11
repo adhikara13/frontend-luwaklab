@@ -14,8 +14,8 @@ export const POST: APIRoute = async ({ request, cookies, redirect }) => {
         provider: provider as Provider,
         options: {
           redirectTo: import.meta.env.DEV
-            ? "https://4321-luwakiotsec-luwaklabfro-fqxlildt2oh.ws-eu106.gitpod.io/api/auth/callback"
-            : "https://4321-luwakiotsec-luwaklabfro-fqxlildt2oh.ws-eu106.gitpod.io/api/auth/callback",
+            ? "https://frontend-luwaklab-qgfg.vercel.app/api/auth/callback"
+            : "https://frontend-luwaklab-qgfg.vercel.app/api/auth/callback",
         },
       });
   
