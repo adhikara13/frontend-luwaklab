@@ -1,30 +1,29 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from "~/layouts/AuthenticatedPageLayout.astro";
 export const prerender = true;
-import Hero2 from '~/components/widgets/Hero2.astro';
+import Hero2 from "~/components/widgets/Hero2.astro";
 
-import { getPermalink } from '~/utils/permalinks';
+import { getPermalink } from "~/utils/permalinks";
 
 const metadata = {
-  title: 'IoT Security',
+  title: "IoT Security",
 };
 ---
 
 <Layout metadata={metadata}>
-
   <!-- Hero2 Widget ******************* -->
 
-<Hero2
+  <Hero2
     tagline="Dashboard in Development"
     title="Exciting Developments Await!"
-    subtitle="Our team is hard at work crafting a state-of-the-art dashboard to enhance your IoT firmware security experience. Stay tuned for a seamless interface that empowers you to safeguard your devices effortlessly. Join our waitlist for exclusive updates." actions={[
-      { text: 'Learn more', href: '#' },
-      { variant: 'primary', text: 'Join Waitlist', href: '#' },
+    subtitle="Our team is hard at work crafting a state-of-the-art dashboard to enhance your IoT firmware security experience. Stay tuned for a seamless interface that empowers you to safeguard your devices effortlessly. Join our waitlist for exclusive updates."
+    actions={[
+      { text: "Learn more", href: "#" },
+      { variant: "primary", text: "Join Waitlist", href: "#" },
     ]}
     image={{
-      src: '~/assets/images/safety.png',
-      alt: 'Store with a Coming Soon sign. Pre-launch Landing Page',
+      src: "~/assets/images/safety.png",
+      alt: "Store with a Coming Soon sign. Pre-launch Landing Page",
     }}
-/>
-
+  />
 </Layout>
