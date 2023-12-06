@@ -13,7 +13,7 @@ export const GET: APIRoute = async ({ url, cookies, redirect }) => {
   if (error) {
     return new Response(error.message, { status: 500 });
   }
-
+  // console.log(data);
   const { access_token, refresh_token } = data.session;
   const pfpUrl = data.user?.user_metadata.avatar_url;
 
