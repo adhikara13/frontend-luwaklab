@@ -1,6 +1,6 @@
 {
-  "name": "@onwidget/astrowind",
-  "description": "AstroWind: A free template using Astro 3.0 and Tailwind CSS. Astro starter theme.",
+  "name": "@luwaklab/luwaklab",
+  "description": "LuwakLab",
   "version": "1.0.0-beta.6",
   "private": true,
   "scripts": {
@@ -15,20 +15,20 @@
   "dependencies": {
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.0",
+    "@astrojs/vercel": "v5.2.0",
     "@astrolib/analytics": "^0.4.2",
     "@astrolib/seo": "^1.0.0-beta.4",
-    "@fontsource-variable/inter": "^5.0.8",
     "@faker-js/faker": "^7.6.0",
-		"apexcharts": "^3.37.2",
-    "@astrojs/vercel":"v5.2.0",
+    "@fontsource-variable/inter": "^5.0.8",
+    "@supabase/supabase-js": "^2.38.4",
+    "apexcharts": "^3.37.2",
     "astro": "^3.1.2",
     "astro-icon": "^1.0.0-next.2",
+    "flowbite": "^1.8.1",
+    "flowbite-typography": "^1.0.3",
     "limax": "4.1.0",
-    "flowbite": "^1.6.3",
-		"flowbite-typography": "^1.0.3",
     "lodash.merge": "^4.6.2",
     "shiki": "^0.14.1",
-    "@supabase/supabase-js": "^2.38.4",
     "tailwind-scrollbar": "^3.0.0",
     "unpic": "^3.10.0"
   },
@@ -59,4 +59,3 @@
     "node": ">=18.14.1"
   }
 }
-

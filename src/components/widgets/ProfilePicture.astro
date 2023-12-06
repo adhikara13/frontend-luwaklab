@@ -1,0 +1,12 @@
+---
+import defaultPfpImage from '~/assets/images/default_pfp.png';
+
+const pfpUrl = Astro.cookies.get('profile-picture-url');
+const src = pfpUrl ? pfpUrl.value : defaultPfpImage.src;
+---
+
+<img
+    class="w-8 h-8 rounded-full"
+    src={src}
+    alt="user photo"
+/>

@@ -1,0 +1,26 @@
+---
+import FooterSidebar from './FooterSidebar.astro';
+//import LayoutCommon from './LayoutCommon.astro';
+import Layout from '~/layouts/Layout.astro';
+import NavBarSidebar from './NavBarSidebar.astro';
+import SideBar from './SideBar.astro';
+---
+
+<!-- <LayoutCommon> -->
+<Layout metadata={{title: 'Dashboard'}}>
+	<NavBarSidebar />
+
+	<SideBar />
+
+	<div class="flex pt-16 overflow-hidden bg-gray-50 dark:bg-gray-900">
+		<div
+			id="main-content"
+			class="relative w-full h-full overflow-y-auto lg:ml-64 min-h-screen bg-page"
+		>
+			<slot />
+
+			<FooterSidebar />
+		</div>
+	</div>
+</Layout>
+<!-- </LayoutCommon> -->

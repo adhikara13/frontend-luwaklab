@@ -1,5 +1,5 @@
 ---
-import Layout from "~/layouts/PageLayout.astro";
+import PageLayout from "~/layouts/PageLayout.astro";
 
 import Header from "~/components/widgets/Header.astro";
 export const prerender = true;
@@ -12,7 +12,7 @@ const metadata = {
 };
 ---
 
-<Layout metadata={metadata}>
+<PageLayout metadata={metadata}>
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
@@ -33,4 +33,4 @@ const metadata = {
       alt: "Store with a Coming Soon sign. Pre-launch Landing Page",
     }}
   />
-</Layout>
+</PageLayout>

@@ -1,6 +1,6 @@
 site:
   name: LuwakLab
-  site: 'https://astrowind.vercel.app'
+  site: 'https://luwaklab.vercel.app'
   base: '/'
   trailingSlash: false
 
