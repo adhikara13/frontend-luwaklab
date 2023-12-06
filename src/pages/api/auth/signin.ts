@@ -14,7 +14,7 @@ export const POST: APIRoute = async ({ request, cookies, redirect }) => {
         provider: provider as Provider,
         options: {
           redirectTo: import.meta.env.DEV
-            ? "https://www.luwaklab.my.id/api/auth/callback"
+            ? "http://localhost:4321/api/auth/callback"
             : "https://www.luwaklab.my.id/api/auth/callback",
         },
       });
@@ -37,7 +37,7 @@ export const POST: APIRoute = async ({ request, cookies, redirect }) => {
     if (error) {
       return new Response(error.message, { status: 500 });
     }
-  
+
     const { access_token, refresh_token } = data.session;
     cookies.set("sb-access-token", access_token, {
       sameSite: "strict",
