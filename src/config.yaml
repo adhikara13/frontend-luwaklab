@@ -1,6 +1,6 @@
 site:
   name: LuwakLab
-  site: 'https://luwaklab.vercel.app'
+  site: 'https://www.luwaklab.my.id/'
   base: '/'
   trailingSlash: false
 

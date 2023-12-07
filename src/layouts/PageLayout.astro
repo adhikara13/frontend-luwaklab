@@ -25,15 +25,15 @@ const { metadata } = Astro.props;
         { text: "Blog", href: getBlogPermalink() },
       ]}
       actions={[
-        {
-          variant: "secondary",
-          text: "Login",
-          href: getPermalink("/signin"),
-        },
+        // {
+        //   variant: "secondary",
+        //   text: "Login",
+        //   href: getPermalink("/signin"),
+        // },
         {
           variant: "primary",
-          text: "Sign Up",
-          href: getPermalink("/signup"),
+          text: "Get Started",
+          href: getPermalink("/signin"),
         },
       ]}
       isSticky

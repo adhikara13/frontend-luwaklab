@@ -14,8 +14,8 @@ export const POST: APIRoute = async ({ request, cookies, redirect }) => {
         provider: provider as Provider,
         options: {
           redirectTo: import.meta.env.DEV
-            ? "https://www.luwaklab.my.id/"
-            : "https://www.luwaklab.my.id/",
+            ? "https://www.luwaklab.my.id/api/auth/callback"
+            : "https://www.luwaklab.my.id/api/auth/callback",
         },
       });
   
